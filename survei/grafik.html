@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Grafik Survei</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <canvas id="grafikSurvei"></canvas>
+  <script>
+    fetch('get_data.php')
+      .then(res => res.json())
+      .then(data => {
+        new Chart(document.getElementById("grafikSurvei"), {
+          type: 'bar',
+          data: {
+            labels: data.label,
+            datasets: [{
+              label: "Jumlah Suara",
+              data: data.jumlah,
+              backgroundColor: "rgba(54, 162, 235, 0.5)"
+            }]
+          }
+        });
+      });
+  </script>
+</body>
+</html>

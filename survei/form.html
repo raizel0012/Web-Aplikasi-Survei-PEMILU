@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Form Survei</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="p-4">
+  <div class="container">
+    <h2 class="mb-4">Form Survei Pilihan Kandidat</h2>
+    <form method="POST" action="tambah_responden.php">
+      <div class="mb-3">
+        <label for="nama" class="form-label">Nama Lengkap</label>
+        <input type="text" class="form-control" name="nama" id="nama" required>
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">Email (opsional)</label>
+        <input type="email" class="form-control" name="email" id="email">
+      </div>
+      <div class="mb-3">
+        <label for="kandidat" class="form-label">Pilih Kandidat</label>
+        <select class="form-select" name="kandidat" id="kandidat" required>
+          <option value="">-- Pilih Kandidat --</option>
+          <option value="1">Kandidat A</option>
+          <option value="2">Kandidat B</option>
+          <option value="3">Kandidat C</option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn-primary">Kirim Survei</button>
+    </form>
+    <br>
+    <a href="grafik.html" class="btn btn-success">Lihat Hasil Grafik</a>
+  </div>
+</body>
+</html>
